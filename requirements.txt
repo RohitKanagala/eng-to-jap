@@ -1,0 +1,5 @@
+Flask
+Flask-CORS
+groq
+python-dotenv
+gTTS

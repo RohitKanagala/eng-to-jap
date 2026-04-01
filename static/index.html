@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Machine Translation Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar glass-panel">
+            <h2>Settings</h2>
+            
+            <div class="input-group">
+                <label for="source-lang">Source Language</label>
+                <select id="source-lang">
+                    <option value="English" selected>English</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                    <option value="Japanese">Japanese</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Korean">Korean</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="target-lang">Target Language</label>
+                <select id="target-lang">
+                    <option value="Japanese" selected>Japanese</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                    <option value="English">English</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Korean">Korean</option>
+                </select>
+            </div>
+            
+            <div class="designer-credit">
+                Built with ❤️ using Flask & Vanilla JS
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1>🌍 AI Machine Translation Studio</h1>
+                <p>Translate text seamlessly with high-quality AI and listen to the pronunciation.</p>
+            </header>
+
+            <section class="translation-workspace glass-panel">
+                <div class="input-area">
+                    <label for="text-input">Enter text to translate:</label>
+                    <textarea id="text-input" placeholder="Type your text here... What a beautiful day to learn language!"></textarea>
+                </div>
+                
+                <button id="translate-btn" class="primary-btn">
+                    <span class="btn-text">🚀 Translate Now</span>
+                    <span class="loader hidden"></span>
+                </button>
+            </section>
+
+            <!-- Results Section - Hidden by Default -->
+            <section id="result-section" class="result-section hidden glass-panel">
+                <div class="success-banner">
+                    ✅ Translation Complete!
+                </div>
+
+                <div class="result-box translation-box">
+                    <h3>Translation</h3>
+                    <div id="output-translation" class="output-text result-primary"></div>
+                </div>
+
+                <div class="result-box pronunciation-box">
+                    <h3>Phonetic Pronunciation</h3>
+                    <div id="output-pronunciation" class="output-text result-secondary"></div>
+                </div>
+
+                <div class="result-box audio-box" id="audio-container">
+                    <h3>Audio Pronunciation</h3>
+                    <audio id="audio-player" controls>
+                        <source src="" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </section>
+            
+            <div id="error-banner" class="error-banner hidden"></div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
