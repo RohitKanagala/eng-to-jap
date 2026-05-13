@@ -1,4 +1,4 @@
-# AI Machine Translation Studio 🌍
+# AI Machine Translation Studio 
 
 A Machine Translation web application that translates text from one language to another (e.g., English to Japanese) using advanced Natural Language Processing techniques. The application not only provides the translated text, but also the phonetic pronunciation (like Rōmaji) and generates a spoken audio format of the translation using `gTTS` (Google Text-to-Speech).
 
